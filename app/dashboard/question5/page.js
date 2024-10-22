@@ -9,7 +9,9 @@ import '@/app/style.css';
 export default function Dashboard() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  const [instagramLink, setInstagramLink] = useState('');
+  const [facebookLink, setFacebookLink] = useState('');
+  const [twitterLink, setTwitterLink] = useState('');
   const router = useRouter();
     // Helper function to get cookie value by name
     const getCookie = (name) => {
@@ -56,9 +58,7 @@ export default function Dashboard() {
   
   
   
-  const [instagramLink, setInstagramLink] = useState('');
-  const [facebookLink, setFacebookLink] = useState('');
-  const [twitterLink, setTwitterLink] = useState('');
+  
 
   return (
     <div className="flex h-screen bg-black font-poppins overflow-hidden">

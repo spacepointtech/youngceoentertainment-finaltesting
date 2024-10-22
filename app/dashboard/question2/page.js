@@ -10,7 +10,7 @@ export default function Dashboard() {
  
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  const [distributedSong, setDistributedSong] = useState(null);
   const router = useRouter();
     // Helper function to get cookie value by name
     const getCookie = (name) => {
@@ -60,7 +60,7 @@ export default function Dashboard() {
  
  
  
-  const [distributedSong, setDistributedSong] = useState(null);
+  
 
   return (
     <div className="flex h-screen bg-black font-poppins overflow-auto">

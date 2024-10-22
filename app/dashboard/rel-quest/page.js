@@ -9,7 +9,11 @@ import '@/app/style.css';
 export default function CreateRelease() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  
+  const [releaseType, setReleaseType] = useState('');
+  const [showOtherInput, setShowOtherInput] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupType, setPopupType] = useState('');
   const router = useRouter();
     // Helper function to get cookie value by name
     const getCookie = (name) => {
@@ -57,10 +61,6 @@ export default function CreateRelease() {
  
  
  
-  const [releaseType, setReleaseType] = useState('');
-  const [showOtherInput, setShowOtherInput] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupType, setPopupType] = useState('');
 
   const handleReleaseTypeChange = (e) => {
     const value = e.target.value;

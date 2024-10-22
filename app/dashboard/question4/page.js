@@ -9,7 +9,8 @@ import Link from 'next/link';
 export default function Dashboard() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  const [spotifyStatus, setSpotifyStatus] = useState(null);
+  const [spotifyLink, setSpotifyLink] = useState('');
   const router = useRouter();
     // Helper function to get cookie value by name
     const getCookie = (name) => {
@@ -55,8 +56,7 @@ export default function Dashboard() {
   
   
   
-  const [spotifyStatus, setSpotifyStatus] = useState(null);
-  const [spotifyLink, setSpotifyLink] = useState('');
+  
 
   return (
     <div className="flex h-screen bg-black font-poppins overflow-hidden">

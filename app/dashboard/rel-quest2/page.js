@@ -9,7 +9,13 @@ import '@/app/style.css';
 export default function CreateRelease() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-
+   
+  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedTime, setSelectedTime] = useState('');
+  const [license, setLicense] = useState('');
+  const [showIndependentTooltip, setShowIndependentTooltip] = useState(false);
+  const [showCreativeTooltip, setShowCreativeTooltip] = useState(false);
+  const [ccType, setCcType] = useState(''); // New state for CC dropdown
   const router = useRouter();
     // Helper function to get cookie value by name
     const getCookie = (name) => {
@@ -52,13 +58,7 @@ export default function CreateRelease() {
     }
     
  
- 
-  const [selectedDate, setSelectedDate] = useState('');
-  const [selectedTime, setSelectedTime] = useState('');
-  const [license, setLicense] = useState('');
-  const [showIndependentTooltip, setShowIndependentTooltip] = useState(false);
-  const [showCreativeTooltip, setShowCreativeTooltip] = useState(false);
-  const [ccType, setCcType] = useState(''); // New state for CC dropdown
+
 
   const handleDateChange = (e) => {
     setSelectedDate(e.target.value);

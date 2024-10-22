@@ -262,7 +262,10 @@ const Tooltip = ({ message, visible, position }) => {
 export default function CreateRelease() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  const [contributors, setContributors] = useState([]);
+  const [role, setRole] = useState('');
+  const [name, setName] = useState('');
+  const [tooltip, setTooltip] = useState({ visible: false, message: '', position: '' });
   const router = useRouter();
     // Helper function to get cookie value by name
     const getCookie = (name) => {
@@ -305,10 +308,7 @@ export default function CreateRelease() {
     }
     
     
-  const [contributors, setContributors] = useState([]);
-  const [role, setRole] = useState('');
-  const [name, setName] = useState('');
-  const [tooltip, setTooltip] = useState({ visible: false, message: '', position: '' });
+  
 
   const handleAddContributor = () => {
     if (role && name) {

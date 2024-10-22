@@ -10,7 +10,7 @@ export default function CreateRelease() {
  
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  const [openSection, setOpenSection] = useState('Settings'); // Set default to Settings
   const router = useRouter();
     // Helper function to get cookie value by name
     const getCookie = (name) => {
@@ -60,7 +60,7 @@ export default function CreateRelease() {
  
  
  
-  const [openSection, setOpenSection] = useState('Settings'); // Set default to Settings
+
 
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);

@@ -10,7 +10,7 @@ import Link from 'next/link';
 export default function Dashboard() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  const [selectedArtistType, setSelectedArtistType] = useState(null);
   const router = useRouter();
     // Helper function to get cookie value by name
     const getCookie = (name) => {
@@ -55,7 +55,7 @@ export default function Dashboard() {
  
  
  
-  const [selectedArtistType, setSelectedArtistType] = useState(null);
+ 
 
   return (
     <div className="flex h-screen bg-black font-poppins overflow-auto">

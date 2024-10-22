@@ -10,7 +10,12 @@ import React, { useEffect, useState } from 'react';
 export default function CreateRelease() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  const [trackFile, setTrackFile] = useState(null);
+  const [trackFileName, setTrackFileName] = useState('');
+  const [catalogFile, setCatalogFile] = useState(null);
+  const [catalogFileName, setCatalogFileName] = useState('');
+  const [coverFile, setCoverFile] = useState(null);
+  const [coverFileName, setCoverFileName] = useState('');
   const router = useRouter();
     // Helper function to get cookie value by name
     const getCookie = (name) => {
@@ -51,12 +56,7 @@ export default function CreateRelease() {
         </div>
       );
     }
-  const [trackFile, setTrackFile] = useState(null);
-  const [trackFileName, setTrackFileName] = useState('');
-  const [catalogFile, setCatalogFile] = useState(null);
-  const [catalogFileName, setCatalogFileName] = useState('');
-  const [coverFile, setCoverFile] = useState(null);
-  const [coverFileName, setCoverFileName] = useState('');
+
   const handleFileUpload = (e, setFile, setFileName, allowedTypes) => {
     const file = e.target.files[0];
     if (file && allowedTypes.includes(file.type)) {
